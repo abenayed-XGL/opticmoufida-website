@@ -145,16 +145,18 @@
       var fig = document.createElement("figure");
       fig.dataset.cat = item.cat;
       fig.dataset.index = i;
+      var thumb = document.createElement("div");
+      thumb.className = "thumb";
       var img = document.createElement("img");
       img.src = "assets/img/" + item.img + ".webp";
-      img.alt = item.brand + " — " + t("cat." + item.cat + ".sub");
+      img.alt = item.brand + " — " + t("cat." + item.cat);
       img.loading = "lazy";
-      if (item.w) { img.width = item.w; img.height = item.h; }
+      thumb.appendChild(img);
       var cap = document.createElement("figcaption");
       cap.innerHTML = "<strong></strong><span></span>";
       cap.querySelector("strong").textContent = item.brand;
       cap.querySelector("span").textContent = t("cat." + item.cat);
-      fig.appendChild(img); fig.appendChild(cap);
+      fig.appendChild(thumb); fig.appendChild(cap);
       fig.addEventListener("click", function () { window.openLightbox(fig); });
       gallery.appendChild(fig);
     });

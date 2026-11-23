@@ -10,9 +10,10 @@ Plain HTML, CSS and JavaScript. No build step, no framework, free to host.
 | `index.html` | `/` |
 | `collection.html` | `/collection` |
 | `about.html` | `/about` |
+| `address.html` | `/address` |
 | `contact.html` | `/contact` |
 | `404.html` | any unknown URL (e.g. old Squarespace product links) |
-| `address.html`, `cart.html` | redirect old Squarespace URLs to the new pages |
+| `cart.html` | redirects the old Squarespace cart URL to the collection |
 
 ## Languages (French / English)
 
@@ -28,7 +29,7 @@ directly to a language with `?lang=en` or `?lang=fr`.
 - **Phone, email, address in links** → search and replace in the `.html` files.
 - **Add a photo to the collection** → save it as `.webp` in `assets/img/`, then add a line in
   `assets/js/collection.js` (brand + category: `optical`, `sun` or `kids`).
-- **Change the hero slideshow** → the `<div class="slideshow">` block in `index.html`.
+- **Change the home video** → replace `assets/video/hero.mp4` (and `assets/img/hero-poster.jpg`).
 - **Colours and fonts** → variables at the top of `assets/css/style.css`.
 
 Preview locally: `python3 -m http.server` in this folder, then open http://localhost:8000/index.html.

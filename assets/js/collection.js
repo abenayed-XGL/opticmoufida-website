@@ -36,6 +36,5 @@ window.COLLECTION = [
   { img: "g-fendi-2",       brand: "Fendi",             cat: "sun",     w: 736,  h: 736 },
   { img: "g-round-sun",     brand: "Optique Moufida",   cat: "sun",     w: 900,  h: 900 },
   { img: "g-dior-sun",      brand: "Dior",              cat: "sun",     w: 800,  h: 1032 },
-  { img: "g-sun-scarf",     brand: "Optique Moufida",   cat: "sun",     w: 598,  h: 768 },
-  { img: "g-tomford",       brand: "Tom Ford",          cat: "sun",     w: 1400, h: 400 }
+  { img: "g-sun-scarf",     brand: "Optique Moufida",   cat: "sun",     w: 598,  h: 768 }
 ];
