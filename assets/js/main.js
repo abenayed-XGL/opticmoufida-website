@@ -81,49 +81,14 @@
     });
   }
 
-  /* ---------- Brands ---------- */
-  var brandFilter = (location.hash || "").replace("#", "");
-  if (["optical", "sun", "kids"].indexOf(brandFilter) < 0) brandFilter = "all";
-
-  function brandCard(b) {
-    var tags = b.cats.map(function (c) { return '<span class="tag">' + esc(t("cat." + c)) + "</span>"; }).join("");
-    var ex = b.examples && b.examples.length
-      ? '<p class="ex">' + esc(t("brands.examples")) + " " + b.examples.map(esc).join(" · ") + "</p>" : "";
-    if (b.img) {
-      return '<article class="brand-card" data-cats="' + b.cats.join(" ") + '">' +
-        '<img src="assets/img/brands/' + b.img + '.webp" alt="' + esc(b.name) + '" loading="lazy" width="800" height="1000">' +
-        '<div class="brand-info"><h3>' + esc(b.name) + '</h3><div class="tags">' + tags + "</div>" + ex + "</div></article>";
-    }
-    return '<article class="brand-text" data-cats="' + b.cats.join(" ") + '"><h3>' + esc(b.name) + '</h3><div class="tags">' + tags + "</div>" + ex + "</article>";
-  }
-
+  /* ---------- Brand index ---------- */
   function renderBrands() {
-    var all = window.BRANDS || [];
-    var home = document.getElementById("home-brands");
-    if (home) home.innerHTML = all.filter(function (b) { return b.home && b.img; }).map(brandCard).join("");
-    var grid = document.getElementById("brand-grid");
-    var also = document.getElementById("brand-also");
-    if (grid) grid.innerHTML = all.filter(function (b) { return b.img; }).map(brandCard).join("");
-    if (also) also.innerHTML = all.filter(function (b) { return !b.img; }).map(brandCard).join("") +
-      '<article class="brand-text brand-more" data-cats="optical sun kids"><h3>' + esc(t("brands.more.title")) + "</h3><p>" + esc(t("brands.more.text")) + "</p></article>";
-    applyBrandFilter(brandFilter);
+    var box = document.getElementById("brand-index");
+    if (!box) return;
+    box.innerHTML = (window.BRANDS || []).map(function (b) {
+      return "<li><strong>" + esc(b.name) + "</strong><span>" + b.cats.map(function (c) { return esc(t("cat." + c)); }).join(" · ") + "</span></li>";
+    }).join("");
   }
-  function applyBrandFilter(f) {
-    brandFilter = f;
-    document.querySelectorAll(".segmented button").forEach(function (b) {
-      b.setAttribute("aria-pressed", b.dataset.filter === f ? "true" : "false");
-    });
-    document.querySelectorAll("#brand-grid > *, #brand-also > *").forEach(function (el) {
-      var show = f === "all" || (el.dataset.cats || "").split(" ").indexOf(f) > -1;
-      el.classList.toggle("is-hidden", !show);
-    });
-  }
-  document.querySelectorAll(".segmented button").forEach(function (b) {
-    b.addEventListener("click", function () {
-      applyBrandFilter(b.dataset.filter);
-      history.replaceState(null, "", b.dataset.filter === "all" ? location.pathname + location.search : "#" + b.dataset.filter);
-    });
-  });
 
   /* ---------- Google reviews ---------- */
   function stars(r) {

@@ -27,12 +27,13 @@ directly to a language with `?lang=en` or `?lang=fr`.
 
 - **Change text, hours, etc.** → `assets/js/i18n.js` (both languages).
 - **Phone, email, address in links** → search and replace in the `.html` files.
-- **Brands and example models** → `assets/js/brands.js`. Brands with a photo (4:5, 800×1000 in
-  `assets/img/brands/`) get a picture card; brands without one get a text card. `home: true` puts it on the home page.
+- **Brands** → `assets/js/brands.js` (name + categories). They appear in the scrolling roll and the brand index.
+- **Collection photos** → `assets/img/col-optical.webp`, `col-sun.webp`, `col-kids.webp` (4:5, about 1200×1500).
 - **Google rating and reviews** → `assets/js/reviews.js`. Put the real rating, number of reviews and up to
   3 real quotes; until then the section just links to the Google page.
 - **Team names** → `TEAM` list in the page generator, or edit the names in `index.html` / `about.html`.
-- **Change the home video** → replace `assets/video/hero.mp4` (and `assets/img/hero-poster.jpg`).
+- **Home photo / film** → `assets/img/hero.webp` (4:5 portrait) and `assets/video/film.mp4` (+ `film-poster.jpg`).
+- **Font** → Jost, self-hosted in `assets/fonts/` (SIL Open Font License).
 - **Colours, corner roundness, glass blur and fonts** → variables at the top of `assets/css/style.css`.
 
 Preview locally: `python3 -m http.server` in this folder, then open http://localhost:8000/index.html.
