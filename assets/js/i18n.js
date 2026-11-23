@@ -63,6 +63,10 @@ window.I18N = {
     "services.4.title": "Réparations",
     "services.4.text": "Petites réparations sur place, ajustage et nettoyage de vos montures offerts.",
 
+    "conv.eyebrow": "Conventions",
+    "conv.title": "Conventions acceptées",
+    "conv.text": "Optique Moufida est conventionnée avec les organismes ci-dessous. Présentez votre carte d'adhérent en boutique, ou appelez-nous pour connaître les conditions de prise en charge.",
+    "conv.ask": "Une question sur votre convention ?",
     "visit.eyebrow": "Nous rendre visite",
     "visit.title": "Passez nous voir en boutique",
     "visit.address": "Adresse",
@@ -186,6 +190,10 @@ window.I18N = {
     "services.4.title": "Repairs",
     "services.4.text": "Small repairs on site, plus free frame tightening and cleaning.",
 
+    "conv.eyebrow": "Conventions",
+    "conv.title": "Accepted conventions",
+    "conv.text": "Optique Moufida has agreements with the organisations below. Bring your membership card to the store, or call us to find out what is covered.",
+    "conv.ask": "Questions about your coverage?",
     "visit.eyebrow": "Visit us",
     "visit.title": "Come and see us in store",
     "visit.address": "Address",
