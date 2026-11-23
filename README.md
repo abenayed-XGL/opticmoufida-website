@@ -30,7 +30,7 @@ directly to a language with `?lang=en` or `?lang=fr`.
 - **Add a photo to the collection** → save it as `.webp` in `assets/img/`, then add a line in
   `assets/js/collection.js` (brand + category: `optical`, `sun` or `kids`).
 - **Change the home video** → replace `assets/video/hero.mp4` (and `assets/img/hero-poster.jpg`).
-- **Colours and fonts** → variables at the top of `assets/css/style.css`.
+- **Colours, corner roundness, glass blur and fonts** → variables at the top of `assets/css/style.css`.
 
 Preview locally: `python3 -m http.server` in this folder, then open http://localhost:8000/index.html.
 All links are relative, so the site works both at `abenayed-xgl.github.io/opticmoufida-website/` and on a custom domain.
