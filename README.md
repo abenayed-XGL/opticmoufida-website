@@ -8,7 +8,7 @@ Plain HTML, CSS and JavaScript. No build step, no framework, free to host.
 | File | URL |
 |---|---|
 | `index.html` | `/` |
-| `collection.html` | `/collection` |
+| `collection.html` | `/collection` (Brands) |
 | `about.html` | `/about` |
 | `address.html` | `/address` |
 | `contact.html` | `/contact` |
@@ -27,8 +27,11 @@ directly to a language with `?lang=en` or `?lang=fr`.
 
 - **Change text, hours, etc.** → `assets/js/i18n.js` (both languages).
 - **Phone, email, address in links** → search and replace in the `.html` files.
-- **Add a photo to the collection** → save it as `.webp` in `assets/img/`, then add a line in
-  `assets/js/collection.js` (brand + category: `optical`, `sun` or `kids`).
+- **Brands and example models** → `assets/js/brands.js`. Brands with a photo (4:5, 800×1000 in
+  `assets/img/brands/`) get a picture card; brands without one get a text card. `home: true` puts it on the home page.
+- **Google rating and reviews** → `assets/js/reviews.js`. Put the real rating, number of reviews and up to
+  3 real quotes; until then the section just links to the Google page.
+- **Team names** → `TEAM` list in the page generator, or edit the names in `index.html` / `about.html`.
 - **Change the home video** → replace `assets/video/hero.mp4` (and `assets/img/hero-poster.jpg`).
 - **Colours, corner roundness, glass blur and fonts** → variables at the top of `assets/css/style.css`.
 

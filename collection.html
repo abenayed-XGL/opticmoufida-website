@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Collection — Optique Moufida</title>
-<meta name="description" content="Opticien à Ariana depuis 1991 : lunettes de vue, lunettes de soleil et montures enfants, verres correcteurs, lentilles de contact et réparations.">
+<title>Nos marques — Optique Moufida</title>
+<meta name="description" content="Opticien familial à Ariana depuis 1991 : conseil personnalisé, grandes marques de lunettes de vue et de soleil, montures enfants, lentilles et réparations.">
 <link rel="canonical" href="https://www.opticmoufida.com/collection">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Collection — Optique Moufida">
-<meta property="og:description" content="Opticien à Ariana depuis 1991 : lunettes de vue, lunettes de soleil et montures enfants, verres correcteurs, lentilles de contact et réparations.">
+<meta property="og:title" content="Nos marques — Optique Moufida">
+<meta property="og:description" content="Opticien familial à Ariana depuis 1991 : conseil personnalisé, grandes marques de lunettes de vue et de soleil, montures enfants, lentilles et réparations.">
 <meta property="og:image" content="https://www.opticmoufida.com/assets/img/store-front.webp">
 <meta name="theme-color" content="#f5f5f7">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
@@ -21,12 +21,12 @@
 <body data-title="meta.collection.title">
 <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Optique Moufida"><img src="assets/img/logo-dark.svg" alt="Optique Moufida — Since 1991" width="86" height="40"></a>
+  <div class="header-inner">
+    <a class="wordmark" href="index.html" aria-label="Optique Moufida"><strong>Optique Moufida</strong><small data-i18n="brand.since">Depuis 1991</small></a>
     <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="collection.html" data-i18n="nav.collection" aria-current="page">Collection</a>
+      <a href="about.html" data-i18n="nav.about">Notre histoire</a>
+      <a href="collection.html" data-i18n="nav.collection" aria-current="page">Marques</a>
       <a href="address.html" data-i18n="nav.address">Adresse</a>
-      <a href="about.html" data-i18n="nav.about">À propos</a>
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-tools">
@@ -41,52 +41,40 @@
 
 <main id="main">
 <section class="page-hero">
-  <div class="container"><h1 data-i18n="collection.title">Collection</h1><p class="sub" data-i18n="collection.lead">Lunettes de vue, lunettes de soleil et montures enfants des plus grandes marques.</p></div>
+  <div class="container"><h1 data-i18n="collection.title">Nos marques</h1><p class="sub" data-i18n="collection.lead">Lunettes de vue, lunettes de soleil et montures enfants : voici quelques-unes des maisons que vous retrouverez chez nous, avec des exemples de modèles.</p></div>
 </section>
 
 <section class="section" style="padding-top:2rem">
   <div class="container">
-    <div class="segmented filters" role="group" aria-label="Filter">
-      <button type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">Tout</button>
-      <button type="button" data-filter="optical" aria-pressed="false" data-i18n="cat.optical">Lunettes de vue</button>
-      <button type="button" data-filter="sun" aria-pressed="false" data-i18n="cat.sun">Lunettes de soleil</button>
+    <div class="segmented" role="group" aria-label="Filter">
+      <button type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">Toutes</button>
+      <button type="button" data-filter="optical" aria-pressed="false" data-i18n="cat.optical">Vue</button>
+      <button type="button" data-filter="sun" aria-pressed="false" data-i18n="cat.sun">Soleil</button>
       <button type="button" data-filter="kids" aria-pressed="false" data-i18n="cat.kids">Enfants</button>
     </div>
-    <div class="gallery" id="gallery"></div>
-    <p class="notice" data-i18n="collection.notice">Notre collection évolue en permanence. Pour connaître la disponibilité d'un modèle, appelez-nous ou passez en boutique.</p>
-  </div>
-</section>
-<section class="section section--white center">
-  <div class="container">
-    <h2 class="reveal" data-i18n="collection.brands">Nos marques</h2>
-    <ul class="brand-list"><li>Gucci</li><li>Dior</li><li>Prada</li><li>Chanel</li><li>Tom Ford</li><li>Saint Laurent</li><li>Cartier</li><li>Fendi</li><li>Versace</li><li>Giorgio Armani</li><li>Emporio Armani</li><li>Jimmy Choo</li><li>Lacoste</li><li>Ray-Ban</li><li>Philipp Plein</li><li>David Beckham</li><li>Charriol</li><li>Polar</li><li>Nano Vista</li></ul>
+    <div class="brand-grid" id="brand-grid"></div>
+    <h2 style="margin-top:3.5rem;font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="collection.alsoTitle">Également en boutique</h2>
+    <div class="brand-also" id="brand-also"></div>
   </div>
 </section>
 </main>
-<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image">
-  <button class="lb-close" type="button" aria-label="Close">×</button>
-  <button class="lb-prev" type="button" aria-label="Previous">‹</button>
-  <img alt="">
-  <button class="lb-next" type="button" aria-label="Next">›</button>
-  <div class="lightbox-caption"></div>
-</div>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div><img src="assets/img/logo-dark.svg" alt="Optique Moufida" width="99" height="46"></div>
+      <div><a class="wordmark" href="index.html" aria-label="Optique Moufida"><strong>Optique Moufida</strong><small data-i18n="brand.since">Depuis 1991</small></a><p style="margin-top:1rem" data-i18n="footer.tagline">Votre opticien à Ariana depuis 1991.</p></div>
       <div>
         <h4 data-i18n="footer.explore">Pages</h4>
         <ul>
-          <li><a href="collection.html" data-i18n="nav.collection">Collection</a></li>
+          <li><a href="about.html" data-i18n="nav.about">Notre histoire</a></li>
+          <li><a href="collection.html" data-i18n="nav.collection">Marques</a></li>
           <li><a href="address.html" data-i18n="nav.address">Adresse</a></li>
-          <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
           <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4 data-i18n="footer.visit">Boutique</h4>
-        <p data-i18n-html="visit.addressValue">Optique Moufida<br>Bloc C, Complexe Commercial Cité Jamil<br>Ariana, Tunisie</p>
-        <p data-i18n-html="visit.hoursValue">Du lundi au samedi<br>de 9h à 20h</p>
+        <p data-i18n-html="visit.addressValue">Bloc C, Complexe Commercial Cité Jamil<br>Ariana, Tunisie</p>
+        <p data-i18n-html="visit.hoursValue">Lundi – Samedi<br>9h00 – 20h00</p>
       </div>
       <div>
         <h4 data-i18n="footer.contact">Contact</h4>
@@ -98,13 +86,12 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Optique Moufida. <span data-i18n="footer.rights">Tous droits réservés.</span></span>
-    </div>
+    <div class="footer-bottom">© <span data-year>2026</span> Optique Moufida. <span data-i18n="footer.rights">Tous droits réservés.</span> <span data-i18n="footer.brands">Les marques citées appartiennent à leurs propriétaires respectifs.</span></div>
   </div>
 </footer>
 <script src="assets/js/i18n.js"></script>
-<script src="assets/js/collection.js"></script>
+<script src="assets/js/brands.js"></script>
+<script src="assets/js/reviews.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
