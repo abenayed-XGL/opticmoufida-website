@@ -32,6 +32,7 @@ directly to a language with `?lang=en` or `?lang=fr`.
 - **Colours and fonts** → variables at the top of `assets/css/style.css`.
 
 Preview locally: `python3 -m http.server` in this folder, then open http://localhost:8000/index.html.
+All links are relative, so the site works both at `abenayed-xgl.github.io/opticmoufida-website/` and on a custom domain.
 
 ## Hosting
 
